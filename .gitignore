@@ -1,25 +1,10 @@
-# CakePHP 3
+# Mac OS X dumps these all over the place.
+.DS_Store
 
-/vendor/*
-/config/app.php
+phpunit.xml
 
-/tmp/cache/models/*
-!/tmp/cache/models/empty
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
-/tmp/cache/views/*
-!/tmp/cache/views/empty
-/tmp/sessions/*
-!/tmp/sessions/empty
-/tmp/tests/*
-!/tmp/tests/empty
+# Ignore the /vendor/ directory for people using composer
+/vendor/
 
-/logs/*
-!/logs/empty
-
-# CakePHP 2
-
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
+# If the vendor directory isn't being commited the composer.lock file should also be ignored
+composer.lock
