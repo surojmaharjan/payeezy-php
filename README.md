@@ -75,9 +75,21 @@ var_dump($response);
 echo "</pre>";
 ```
 
-### Contributing ###
+## Contributing ##
 1. Fork the PHP client library on GitHub
 2. Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the issue tracker. Please file one change per issue, and address one issue per change. If you want to make a change that doesn't have a corresponding issue in the issue tracker, please file a new ticket!
 3. Ensure that your code adheres to standard PHP conventions, as used in the rest of the library.
 4. Ensure that there are unit tests for your code.
 5. Submit a pull request with your patch on Github.
+
+## Feedback ##
+We appreciate the time you take to try out our sample code and welcome your feedback. Here are a few ways to get in touch:
+* For generally applicable issues and feedback, create an issue in this repository.
+* support@payeezy.com - for personal support at any phase of integration
+* [1.855.799.0790](tel:+18557990790)  - for personal support in real time 
+
+## Terms of Use ##
+Terms and conditions for using Payeezy API SDK: Please see [Payeezy Terms & conditions](https://developer.payeezy.com/terms-use)
+ 
+### License
+The Payeezy PHP SDK is open source and available under the MIT license. See the LICENSE file for more info.
