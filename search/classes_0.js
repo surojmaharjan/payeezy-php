@@ -2,6 +2,7 @@ var searchData=
 [
   ['payeezy_5fclient',['Payeezy_Client',['../class_payeezy___client.html',1,'']]],
   ['payeezy_5fcreditcard',['Payeezy_CreditCard',['../class_payeezy___credit_card.html',1,'']]],
+  ['payeezy_5ferror',['Payeezy_Error',['../class_payeezy___error.html',1,'']]],
   ['payeezy_5fpaypal',['Payeezy_Paypal',['../class_payeezy___paypal.html',1,'']]],
   ['payeezy_5ftelecheck',['Payeezy_TeleCheck',['../class_payeezy___tele_check.html',1,'']]],
   ['payeezy_5fthreeds',['Payeezy_threeDS',['../class_payeezy__three_d_s.html',1,'']]],

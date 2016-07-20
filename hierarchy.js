@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "Exception", null, [
+      [ "Payeezy_Error", "class_payeezy___error.html", null ]
+    ] ],
     [ "Payeezy_Client", "class_payeezy___client.html", null ],
     [ "Payeezy_Transaction", "class_payeezy___transaction.html", [
       [ "Payeezy_TransactionType", "class_payeezy___transaction_type.html", [

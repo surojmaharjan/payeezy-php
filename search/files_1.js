@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['paypal_2ephp',['Paypal.php',['../_paypal_8php.html',1,'']]]
+  ['error_2ephp',['Error.php',['../_error_8php.html',1,'']]]
 ];
