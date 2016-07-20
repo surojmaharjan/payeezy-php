@@ -107,5 +107,12 @@ We appreciate the time you take to try out our sample code and welcome your feed
 ## Terms of Use ##
 Terms and conditions for using Payeezy API SDK: Please see [Payeezy Terms & conditions](https://developer.payeezy.com/terms-use)
  
-### License
+### License ###
 The Payeezy PHP SDK is open source and available under the MIT license. See the LICENSE file for more info.
+
+## Project Maintenance ##
+### Github pages ###
+```
+git subtree push --prefix docs origin gh-pages
+```
+https://gist.github.com/cobyism/4730490
