@@ -7,10 +7,11 @@ class Payeezy_Error extends Exception
     
     $this->httpStatus = 200;
     $httpBodyArray = array();
-    foreach ($errorResponse->messages as $message){
+    foreach ($errorResponse->messages as $message) {
       $httpBodyArray[] = $message->description;
     }
-    $this->httpBody = implode(", ", $httpBodyArray);;
+    $this->httpBody = implode(", ", $httpBodyArray);
+    ;
     parent::__construct($message = $this->httpBody);
   }
 
