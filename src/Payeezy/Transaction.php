@@ -135,7 +135,11 @@ class Payeezy_Transaction
     $headerArray = $this->hmacAuthorizationToken($payload);
   
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
-    return json_decode($response_in_JSON);
+    $response = json_decode($response_in_JSON);
+    if (isset($response->Error)) {
+      throw new Payeezy_Error($response->Error);
+    }
+    return $response;
   }
 
   /**
@@ -148,6 +152,10 @@ class Payeezy_Transaction
     $payload = json_encode($args, JSON_FORCE_OBJECT);
     $headerArray = $this->hmacAuthorizationToken($payload);
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
-    return json_decode($response_in_JSON);
+    $response = json_decode($response_in_JSON);
+    if (isset($response->Error)) {
+      throw new Payeezy_Error($response->Error);
+    }
+    return $response;
   }
 }//end of class
