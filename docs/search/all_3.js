@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['balance_5finquiry',['balance_inquiry',['../class_payeezy___transaction_type.html#a75eed76fc0399187cdab6331c07f3a79',1,'Payeezy_TransactionType']]]
+  ['balanceinquiry',['balanceInquiry',['../class_payeezy___transaction_type.html#a150ba6ee505c10c098dae22bc2275123',1,'Payeezy_TransactionType']]]
 ];

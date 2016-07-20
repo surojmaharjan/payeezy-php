@@ -6,6 +6,9 @@ var dir_6f734749cbebb9816e3fe10d91846ed0 =
     [ "CreditCard.php", "_credit_card_8php.html", [
       [ "Payeezy_CreditCard", "class_payeezy___credit_card.html", "class_payeezy___credit_card" ]
     ] ],
+    [ "Error.php", "_error_8php.html", [
+      [ "Payeezy_Error", "class_payeezy___error.html", "class_payeezy___error" ]
+    ] ],
     [ "Paypal.php", "_paypal_8php.html", [
       [ "Payeezy_Paypal", "class_payeezy___paypal.html", "class_payeezy___paypal" ]
     ] ],
