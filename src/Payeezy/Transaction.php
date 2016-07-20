@@ -37,7 +37,7 @@ class Payeezy_Transaction
 
     $hashAlgorithm = "sha256";
 
-    $hmac = hash_hmac ( $hashAlgorithm , $data , $this->apiSecret, false );    // HMAC Hash in hex
+    $hmac = hash_hmac($hashAlgorithm, $data, $this->apiSecret, false);    // HMAC Hash in hex
 
     $authorization = base64_encode($hmac);
 
@@ -63,23 +63,20 @@ class Payeezy_Transaction
    *
    * @return string
    */
-  public function jsonpp($json, $istr='  ')
+  public function jsonpp($json, $istr = '  ')
   {
       $result = '';
-      for($p=$q=$i=0; isset($json[$p]); $p++)
-      {
-          $json[$p] == '"' && ($p>0?$json[$p-1]:'') != '\\' && $q=!$q;
-          if(strchr('}]', $json[$p]) && !$q && $i--)
-          {
-              strchr('{[', $json[$p-1]) || $result .= "\n".str_repeat($istr, $i);
-          }
-          $result .= $json[$p];
-          if(strchr(',{[', $json[$p]) && !$q)
-          {
-              $i += strchr('{[', $json[$p])===FALSE?0:1;
-              strchr('}]', $json[$p+1]) || $result .= "\n".str_repeat($istr, $i);
-          }
+    for ($p=$q=$i=0; isset($json[$p]); $p++) {
+      $json[$p] == '"' && ($p>0?$json[$p-1]:'') != '\\' && $q=!$q;
+      if (strchr('}]', $json[$p]) && !$q && $i--) {
+        strchr('{[', $json[$p-1]) || $result .= "\n".str_repeat($istr, $i);
       }
+      $result .= $json[$p];
+      if (strchr(',{[', $json[$p]) && !$q) {
+        $i += strchr('{[', $json[$p])===false?0:1;
+        strchr('}]', $json[$p+1]) || $result .= "\n".str_repeat($istr, $i);
+      }
+    }
       return $result;
   }
 
@@ -89,29 +86,34 @@ class Payeezy_Transaction
    * Post Transaction
    */
 
-  public  function postTransaction($payload, $headers)
+  public function postTransaction($payload, $headers)
   {
 
     $request = curl_init();
-    curl_setopt($request, CURLOPT_URL, $this->url );
+    curl_setopt($request, CURLOPT_URL, $this->url);
     curl_setopt($request, CURLOPT_POST, true);
     curl_setopt($request, CURLOPT_POSTFIELDS, $payload);
     curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($request, CURLOPT_HEADER, false);
-	//curl_setopt($request, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($request, CURLOPT_HTTPHEADER, array(
-      'Content-Type: application/json',
-      'apikey:'.strval($this->apiKey),
-      'token:'.strval($this->merchantToken),
-      'Authorization:'.$headers['authorization'],
-      'nonce:'.$headers['nonce'],
-      'timestamp:'.$headers['timestamp'],
-    ));
+    //curl_setopt($request, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt(
+        $request,
+        CURLOPT_HTTPHEADER,
+        array(
+        'Content-Type: application/json',
+        'apikey:'.strval($this->apiKey),
+        'token:'.strval($this->merchantToken),
+        'Authorization:'.$headers['authorization'],
+        'nonce:'.$headers['nonce'],
+        'timestamp:'.$headers['timestamp'],
+        )
+    );
 
     $response = curl_exec($request);
 
-	if (FALSE === $response)
+    if (false === $response) {
         echo curl_error($request);
+    }
 
     //$httpcode = curl_getinfo($request, CURLINFO_HTTP_CODE);
     curl_close($request);
@@ -148,5 +150,4 @@ class Payeezy_Transaction
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
     return json_decode($response_in_JSON);
   }
-
 }//end of class

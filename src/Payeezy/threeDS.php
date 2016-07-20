@@ -8,4 +8,3 @@ class Payeezy_threeDS extends Payeezy_TransactionType
     parent::__construct('3ds', $client);
   }
 }
-

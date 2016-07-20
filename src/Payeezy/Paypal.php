@@ -8,4 +8,3 @@ class Payeezy_Paypal extends Payeezy_TransactionType
     parent::__construct('paypal', $client);
   }
 }
-

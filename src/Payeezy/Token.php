@@ -8,4 +8,3 @@ class Payeezy_Token extends Payeezy_TransactionType
     parent::__construct('token', $client);
   }
 }
-

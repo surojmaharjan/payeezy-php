@@ -8,4 +8,3 @@ class Payeezy_ValueLink extends Payeezy_TransactionType
     parent::__construct('valuelink', $client);
   }
 }
-

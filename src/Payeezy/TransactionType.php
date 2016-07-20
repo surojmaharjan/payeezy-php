@@ -140,6 +140,4 @@ class Payeezy_TransactionType extends Payeezy_Transaction
     $args['method'] = $this->method;
     return parent::doPrimaryTransaction($args);
   }
-
 }
-

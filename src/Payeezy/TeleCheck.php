@@ -8,4 +8,3 @@ class Payeezy_TeleCheck extends Payeezy_TransactionType
     parent::__construct('tele_check', $client);
   }
 }
-
