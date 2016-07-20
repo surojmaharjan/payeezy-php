@@ -108,7 +108,7 @@ class Payeezy_TransactionType extends Payeezy_Transaction
    * balance_inquiry Transaction
    */
 
-  public function balance_inquiry($args = array())
+  public function balanceInquiry($args = array())
   {
     $args['transaction_type'] = "balance_inquiry";
     $args['method'] = $this->method;
