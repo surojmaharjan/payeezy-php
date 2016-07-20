@@ -88,6 +88,16 @@ phpunit tests/
 4. Ensure that there are unit tests for your code.
 5. Submit a pull request with your patch on Github.
 
+## Coding Style ##
+To check for coding style violations, run
+```
+vendor/bin/phpcs src --standard=coder_ruleset.xml -np
+```
+To automatically fix (fixable) coding style violations, run
+```
+vendor/bin/phpcbf src --standard=coder_ruleset.xml
+```
+
 ## Feedback ##
 We appreciate the time you take to try out our sample code and welcome your feedback. Here are a few ways to get in touch:
 * For generally applicable issues and feedback, create an issue in this repository.
