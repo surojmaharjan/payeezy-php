@@ -75,6 +75,12 @@ var_dump($response);
 echo "</pre>";
 ```
 
+## Testing ##
+Run the PHPUnit tests with PHPUnit. You can configure API keys and token in BaseTest.php
+```
+phpunit tests/
+```
+
 ## Contributing ##
 1. Fork the PHP client library on GitHub
 2. Decide which code you want to submit. A submission should be a set of changes that addresses one issue in the issue tracker. Please file one change per issue, and address one issue per change. If you want to make a change that doesn't have a corresponding issue in the issue tracker, please file a new ticket!
