@@ -15,18 +15,20 @@ $client->setUrl("https://api-qa.payeezy.com/v1/transactions");
 
 $authorize_card_transaction = new Payeezy_CreditCard($client);
 
-$authorize_response = $authorize_card_transaction->authorize([
-  "merchant_ref" => "Astonishing-Sale",
-  "amount" => "1299",
-  "currency_code" => "USD",
-  "credit_card" => array(
+$authorize_response = $authorize_card_transaction->authorize(
+    [
+    "merchant_ref" => "Astonishing-Sale",
+    "amount" => "1299",
+    "currency_code" => "USD",
+    "credit_card" => array(
     "type" => "visa",
     "cardholder_name" => "John Smith",
     "card_number" => "4788250000028291",
     "exp_date" => "1020",
     "cvv" => "123"
-  )
-]);
+    )
+    ]
+);
 echo "<pre>";
 var_dump($authorize_response);
 echo "</pre>";

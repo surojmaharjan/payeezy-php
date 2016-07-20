@@ -11,20 +11,22 @@ $client->setUrl("https://api-qa.payeezy.com/v1/transactions");
 
 $transaction = new Payeezy_Transaction($client);
 
-$response = $transaction->doPrimaryTransaction([
-  "merchant_ref" => "Astonishing-Sale",
-  "transaction_type" => "purchase",
-  "method" => "credit_card",
-  "amount" => "1299",
-  "currency_code" => "USD",
-  "credit_card" => array(
+$response = $transaction->doPrimaryTransaction(
+    [
+    "merchant_ref" => "Astonishing-Sale",
+    "transaction_type" => "purchase",
+    "method" => "credit_card",
+    "amount" => "1299",
+    "currency_code" => "USD",
+    "credit_card" => array(
     "type" => "visa",
     "cardholder_name" => "John Smith",
     "card_number" => "4788250000028291",
     "exp_date" => "1020",
     "cvv" => "123"
-  )
-]);
+    )
+    ]
+);
 echo "<pre>";
 var_dump($response);
 echo "</pre>";

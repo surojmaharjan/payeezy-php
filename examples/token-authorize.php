@@ -15,7 +15,8 @@ $client->setUrl("https://api-qa.payeezy.com/v1/transactions");
 
 $authorize_card_transaction = new Payeezy_Token($client);
 
-$authorize_response = $authorize_card_transaction->authorize([
+$authorize_response = $authorize_card_transaction->authorize(
+    [
         "merchant_ref" => "Astonishing-Sale",
         "transaction_type" => "authorize",
         "method" => "token",
@@ -30,7 +31,8 @@ $authorize_response = $authorize_card_transaction->authorize([
             "exp_date" => "1030"
           )
         )
-      ]);
+    ]
+);
 echo "<pre>";
 var_dump($authorize_response);
 echo "</pre>";
