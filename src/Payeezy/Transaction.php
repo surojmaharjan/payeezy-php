@@ -137,7 +137,7 @@ class Payeezy_Transaction
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
     $response = json_decode($response_in_JSON);
     if (isset($response->Error)) {
-      throw new Payeezy_Error($response->Error);
+      throw new Payeezy_Error($response->correlation_id, $response->Error);
     }
     return $response;
   }
@@ -154,7 +154,7 @@ class Payeezy_Transaction
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
     $response = json_decode($response_in_JSON);
     if (isset($response->Error)) {
-      throw new Payeezy_Error($response->Error);
+      throw new Payeezy_Error($response->correlation_id, $response->Error);
     }
     return $response;
   }
