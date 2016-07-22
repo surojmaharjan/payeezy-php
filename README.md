@@ -54,7 +54,6 @@ $client = new Payeezy_Client();
 $client->setApiKey("YOUR_API_KEY");
 $client->setApiSecret("YOUR_API_SECRET");
 $client->setMerchantToken("YOUR_MERCHANT_TOKEN");
-$client->setTokenUrl("https://api-cert.payeezy.com/v1/transactions/tokens");
 $client->setUrl("https://api-cert.payeezy.com/v1/transactions");
 
 $card_transaction = new Payeezy_CreditCard($client);
