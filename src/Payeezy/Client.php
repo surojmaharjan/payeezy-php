@@ -18,11 +18,6 @@ class Payeezy_Client
   public static $merchantToken;
   
   /**
-   * @var string The Payeezy Token URL to be used for requests.
-   */
-  public static $tokenUrl;
-  
-  /**
    * @var string The Payeezy URL to be used for requests.
    */
   public static $url;
@@ -81,25 +76,6 @@ class Payeezy_Client
   public static function setMerchantToken($merchantToken)
   {
     self::$merchantToken = $merchantToken;
-  }
-  
-
-  /**
-   * @return string The API key used for requests.
-   */
-  public static function getTokenUrl()
-  {
-    return self::$tokenUrl;
-  }
-  
-  /**
-   * Sets the API key to be used for requests.
-   *
-   * @param string $apiKey
-   */
-  public static function setTokenUrl($tokenUrl)
-  {
-    self::$tokenUrl = $tokenUrl;
   }
   
 
