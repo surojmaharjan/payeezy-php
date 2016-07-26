@@ -26,7 +26,7 @@ require_once '/path/to/your-project/vendor/autoload.php';
 
 ### Download the Release
 
-If you abhor using composer, you can download the package in its entirety. The [Releases](https://github.com/ndubbaka/payeezy-php/releases) page lists all stable versions. Download any file
+If you abhor using composer, you can download the package in its entirety. The [Releases](https://github.com/payeezy/payeezy-php/releases) page lists all stable versions. Download any file
 with the name `payeezy-php-[RELEASE_NAME].zip` for a package including this library and its dependencies.
 
 Uncompress the zip file you download, and include the autoloader in your project:
