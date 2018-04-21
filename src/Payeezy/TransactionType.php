@@ -5,7 +5,7 @@ class Payeezy_TransactionType extends Payeezy_Transaction
 
   private $method;
 
-  public function __construct($method, $client)
+  public function __construct($method, Payeezy_Client $client)
   {
     $this->method = $method;
     parent::__construct($client);

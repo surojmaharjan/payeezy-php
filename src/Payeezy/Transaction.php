@@ -12,7 +12,7 @@ class Payeezy_Transaction
 
   private $merchantToken;
 
-  public function __construct($client)
+  public function __construct(Payeezy_Client $client)
   {
     $this->baseURL = $client->getUrl();
     $this->apiKey = $client->getApiKey();
@@ -136,9 +136,9 @@ class Payeezy_Transaction
   
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
     $response = json_decode($response_in_JSON);
-    if (isset($response->Error)) {
-      throw new Payeezy_Error($response->correlation_id, $response->Error);
-    }
+//    if (isset($response->Error)) {
+//      throw new Payeezy_Error($response->correlation_id, $response->Error);
+//    }
     return $response;
   }
 
@@ -153,9 +153,9 @@ class Payeezy_Transaction
     $headerArray = $this->hmacAuthorizationToken($payload);
     $response_in_JSON = $this->postTransaction($payload, $headerArray);
     $response = json_decode($response_in_JSON);
-    if (isset($response->Error)) {
-      throw new Payeezy_Error($response->correlation_id, $response->Error);
-    }
+//    if (isset($response->Error)) {
+//      throw new Payeezy_Error($response->correlation_id, $response->Error);
+//    }
     return $response;
   }
 }//end of class

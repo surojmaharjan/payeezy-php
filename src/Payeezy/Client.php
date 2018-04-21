@@ -2,98 +2,98 @@
 
 class Payeezy_Client
 {
-  /**
-   * @var string The Payeezy API key to be used for requests.
-   */
-  public static $apiKey;
-  
-  /**
-   * @var string The Payeezy API Secret to be used for requests.
-   */
-  public static $apiSecret;
-  
-  /**
-   * @var string The Payeezy Merchant Token to be used for requests.
-   */
-  public static $merchantToken;
-  
-  /**
-   * @var string The Payeezy URL to be used for requests.
-   */
-  public static $url;
+    /**
+     * @var string The Payeezy API key to be used for requests.
+     */
+    public $apiKey;
 
-  const VERSION = '1.0.0';
+    /**
+     * @var string The Payeezy API Secret to be used for requests.
+     */
+    public $apiSecret;
 
-  /**
-   * @return string The API key used for requests.
-   */
-  public static function getApiKey()
-  {
-    return self::$apiKey;
-  }
+    /**
+     * @var string The Payeezy Merchant Token to be used for requests.
+     */
+    public $merchantToken;
 
-  /**
-   * Sets the API key to be used for requests.
-   *
-   * @param string $apiKey
-   */
-  public static function setApiKey($apiKey)
-  {
-    self::$apiKey = $apiKey;
-  }
+    /**
+     * @var string The Payeezy URL to be used for requests.
+     */
+    public $url;
 
-  /**
-   * @return string The API key used for requests.
-   */
-  public static function getApiSecret()
-  {
-    return self::$apiSecret;
-  }
-  
-  /**
-   * Sets the API key to be used for requests.
-   *
-   * @param string $apiKey
-   */
-  public static function setApiSecret($apiSecret)
-  {
-    self::$apiSecret = $apiSecret;
-  }
+    const VERSION = '1.0.0';
 
-  /**
-   * @return string The API key used for requests.
-   */
-  public static function getMerchantToken()
-  {
-    return self::$merchantToken;
-  }
-  
-  /**
-   * Sets the API key to be used for requests.
-   *
-   * @param string $apiKey
-   */
-  public static function setMerchantToken($merchantToken)
-  {
-    self::$merchantToken = $merchantToken;
-  }
-  
+    /**
+     * @return string The API key used for requests.
+     */
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
 
-  /**
-   * @return string The API key used for requests.
-   */
-  public static function getUrl()
-  {
-    return self::$url;
-  }
-  
-  /**
-   * Sets the API key to be used for requests.
-   *
-   * @param string $apiKey
-   */
-  public static function setUrl($url)
-  {
-    self::$url = $url;
-  }
+    /**
+     * Sets the API key to be used for requests.
+     *
+     * @param string $apiKey
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+    }
+
+    /**
+     * @return string The API key used for requests.
+     */
+    public function getApiSecret()
+    {
+        return $this->apiSecret;
+    }
+
+    /**
+     * Sets the API key to be used for requests.
+     *
+     * @param string $apiKey
+     */
+    public function setApiSecret($apiSecret)
+    {
+        $this->apiSecret = $apiSecret;
+    }
+
+    /**
+     * @return string The API key used for requests.
+     */
+    public function getMerchantToken()
+    {
+        return $this->merchantToken;
+    }
+
+    /**
+     * Sets the API key to be used for requests.
+     *
+     * @param string $apiKey
+     */
+    public function setMerchantToken($merchantToken)
+    {
+        $this->merchantToken = $merchantToken;
+    }
+
+
+    /**
+     * @return string The API key used for requests.
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * Sets the API key to be used for requests.
+     *
+     * @param string $apiKey
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
 }
